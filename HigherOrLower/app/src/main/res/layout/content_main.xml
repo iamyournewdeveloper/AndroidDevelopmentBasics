@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <TextView android:text="I have a random number between 0 and 20" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoText"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can you guess it?"
+        android:id="@+id/textView"
+        android:layout_marginTop="27dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/infoText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etGuessedNumber"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess"
+        android:id="@+id/btnGuess"
+        android:onClick="checkGuess"
+        android:layout_below="@+id/etGuessedNumber"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Random Number"
+        android:id="@+id/btnGenerateRandomNumber"
+        android:onClick="GenerateNewRandomNumber"
+        android:layout_below="@+id/btnGuess"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+</RelativeLayout>
